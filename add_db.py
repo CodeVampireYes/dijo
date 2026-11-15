@@ -22,7 +22,7 @@ def add_db_data_zp(month_years, month_money):
   conn.close()
 
 
-def input_bar()
+def input_bar():
   # Поля ввода
   input_data = st.text_input('Data')
   input_zp = st.text_input('Zp')
