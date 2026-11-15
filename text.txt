@@ -1,0 +1,17 @@
+Сохраните текущие изменения в ветке test (если еще не сохранили):
+git add .
+git commit -m "Готовые изменения в тесте"
+git push origin test
+
+Переключитесь на основную ветку main:
+git checkout main
+git pull origin main
+
+Влейте изменения из ветки test в main:
+git merge test
+
+Отправьте обновленный main на GitHub:
+git push origin main
+
+Вернитесь обратно в тестовую ветку для дальнейшей работы:
+git checkout test
