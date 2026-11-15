@@ -17,8 +17,9 @@ masa_placka = st.text_input('masa_placka')
 masa_opak = st.text_input('masa_opak')
 wilgot = st.text_input('wilgot')
 aw = st.text_input('aw')
-owal = st.text_input('owal')
-vs = st.text_input('vs', value='1.9')
+ph = st.text_input('ph')
+owal = st.text_input('owal', value='1.9')
+vs = st.text_input('vs')
 wypiek = st.text_input('wypiek')
 
 if st.button('Добавить'):
@@ -26,9 +27,9 @@ if st.button('Добавить'):
         conn = sqlite3.connect("my_db_dijo.db")
         cursor = conn.cursor()
         cursor.execute("""
-                        INSERT INTO my_recept VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                        INSERT INTO my_recept VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                     """, (
-        id_p, indeks, szt, klient, rec, waga_kesa, rozmiar, masa_placka, masa_opak, wilgot, aw, owal, vs, wypiek))
+        id_p, indeks, szt, klient, rec, waga_kesa, rozmiar, masa_placka, masa_opak, wilgot, aw, ph, owal, vs, wypiek))
         conn.commit()
         conn.close()
 
