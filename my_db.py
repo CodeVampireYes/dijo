@@ -31,6 +31,7 @@ cursor.execute('''
                                         masa_opak TEXT,
                                         wilgot TEXT,
                                         aw TEXT,
+                                        aw TEXT,
                                         owal TEXT,
                                         vs TEXT,
                                         wypiek TEXT)
