@@ -16,3 +16,26 @@ cursor.execute('''
 
 conn.close()
 
+conn = sqlite3.connect('my_db_dijo.db')
+cursor = conn.cursor()
+
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS my_recept (id_p TEXT,
+                                        indeks TEXT,
+                                        szt TEXT,
+                                        klient TEXT,
+                                        rec TEXT,
+                                        waga_kesa TEXT,
+                                        rozmiar TEXT,
+                                        masa_placka TEXT,
+                                        masa_opak TEXT,
+                                        wilgot TEXT,
+                                        aw TEXT,
+                                        ph TEXT,
+                                        owal TEXT,
+                                        vs TEXT,
+                                        wypiek TEXT)
+''')
+
+conn.close()
+
